@@ -35,6 +35,10 @@ async function main() {
     const updateResult = await collection.updateOne({ "Phone Number": 7352149707 }, { $set: { "Phone Number": 8969402318 } });
     console.log('Updated documents =>', updateResult);
   
+    const countResult =await collection.countDocuments({});
+    console.log("Count of result",countResult);
+
+
     return 'done.';
   }
   
