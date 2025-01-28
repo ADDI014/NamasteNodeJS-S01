@@ -15,6 +15,8 @@ async function main() {
     const db = client.db(dbName);
     const collection = db.collection('User');
 
+    const findResult = await collection.find({}).toArray();
+    console.log('Found documents =>', findResult);
 
   
     return 'done.';
