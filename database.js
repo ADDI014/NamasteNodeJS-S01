@@ -32,7 +32,8 @@ async function main() {
     const insertResult = await collection.insertMany([data]);
     console.log('Inserted documents =>', insertResult);
     
-    
+    const updateResult = await collection.updateOne({ "Phone Number": 7352149707 }, { $set: { "Phone Number": 8969402318 } });
+    console.log('Updated documents =>', updateResult);
   
     return 'done.';
   }
